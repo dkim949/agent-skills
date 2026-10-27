@@ -1,0 +1,6 @@
+interface:
+  display_name: "Tldr"
+  short_description: "Summarize without losing the source meaning"
+  default_prompt: "Use $tldr for the relevant task in my request."
+policy:
+  allow_implicit_invocation: true

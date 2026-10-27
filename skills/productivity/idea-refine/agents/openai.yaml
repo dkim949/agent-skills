@@ -1,0 +1,6 @@
+interface:
+  display_name: "Idea Refine"
+  short_description: "Shape an idea with alternatives and a small test"
+  default_prompt: "Use $idea-refine for the relevant task in my request."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sql Style Guide"
+  short_description: "Format SQL with readable leading commas"
+  default_prompt: "Use $sql-style-guide for the relevant task in my request."
+policy:
+  allow_implicit_invocation: true

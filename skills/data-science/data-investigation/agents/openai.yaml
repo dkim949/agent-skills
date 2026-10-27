@@ -1,0 +1,6 @@
+interface:
+  display_name: "Data Investigation"
+  short_description: "Test explanations against inspectable evidence"
+  default_prompt: "Use $data-investigation for the relevant task in my request."
+policy:
+  allow_implicit_invocation: true
