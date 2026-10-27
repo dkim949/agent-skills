@@ -14,7 +14,7 @@ EXPECTED_SKILLS = {
     "ask-me": "productivity", "idea-refine": "productivity", "tldr": "productivity",
     "explain": "productivity", "handoff": "productivity",
     "data-investigation": "data-science", "sql-style-guide": "data-science",
-    "review-and-improve": "engineering", "retro": "meta", "write-a-skill": "meta",
+    "review-and-improve": "engineering", "write-a-skill": "meta",
 }
 ROOT_FILES = {"README.md", "LICENSE", "ATTRIBUTIONS.md", "requirements-dev.txt", ".gitignore"}
 PACKAGED_DIRS = {"skills", "LICENSES", "docs", "evals", "scripts", "tests", ".github"}
@@ -146,9 +146,7 @@ def validate(root: Path) -> list[str]:
             errors.append(f"{rel}: missing or mismatched metadata category")
         if data.get("license") != "MIT":
             errors.append(f"{rel}: expected MIT license declaration")
-        if name == "retro" and data.get("disable-model-invocation") is not True:
-            errors.append(f"{rel}: retro must require explicit invocation")
-        if name != "retro" and data.get("disable-model-invocation") is True:
+        if data.get("disable-model-invocation") is True:
             errors.append(f"{rel}: expected eligibility for model selection")
         if not (path.parent / "LICENSE").is_file():
             errors.append(f"{rel}: per-skill LICENSE is missing")
@@ -162,7 +160,7 @@ def validate(root: Path) -> list[str]:
                 errors.append(f"{client_path.relative_to(root)}: invalid YAML: {error}")
             else:
                 policy = client_data.get("policy") if isinstance(client_data, dict) else None
-                expected_implicit = name != "retro"
+                expected_implicit = True
                 if not isinstance(policy, dict) or policy.get("allow_implicit_invocation") is not expected_implicit:
                     errors.append(
                         f"{client_path.relative_to(root)}: allow_implicit_invocation must be {expected_implicit}"

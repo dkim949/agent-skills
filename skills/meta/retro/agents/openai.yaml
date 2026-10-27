@@ -1,6 +1,0 @@
-interface:
-  display_name: "Retro"
-  short_description: "Review a coding session for environment improvements"
-  default_prompt: "Use $retro for the relevant task in my request."
-policy:
-  allow_implicit_invocation: false

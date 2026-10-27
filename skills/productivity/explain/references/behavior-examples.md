@@ -10,7 +10,8 @@ These cases describe expected behavior for review; they are not a required respo
 | "I don't understand why you said this caused the increase" when the source shows only correlation | Check the earlier inference, correct the causal claim, and explain the evidence's limit. |
 | "Explain the retry flow in this repository" | Read the implementation and trace a concrete failure through its branches. |
 | "Summarize this article in three lines" | Use tldr; preserve the source's qualifications without adding a new lesson. |
-| "What does this Slack conversation mean?" | Explain the chronology, claims, and interpretation directly; use a conversation-specific skill if installed. |
+| "What does this chat conversation mean?" | Use the conversation reference to explain chronology, claims, evidence, and interpretation; preserve uncertainty. |
+| "Translate this email chain and explain why they changed their mind" | Group connected exchanges chronologically, give faithful translation, and explain the evidence or rebuttal behind each change. |
 | "Teach me this step by step" | Use the optional learning reference and the stated goal; do not create persistent artifacts automatically. |
 | "Explain gradient descent" | Explain the concept without an unsolicited quiz, understanding gate, preference file, or lesson folder. |
 | "Give me two exercises and check my answers" | Offer the requested practice and feedback; keep progress in the conversation. |

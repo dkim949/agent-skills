@@ -1,6 +1,6 @@
 ---
 name: sql-style-guide
-description: Formats SQL with leading commas and explicit aliases. Use when writing, rewriting, reviewing, or explaining SQL, including partial snippets; preserve query semantics and honor an explicitly requested alternative style.
+description: Formats SQL with leading commas and explicit aliases and explains exploratory query results. Use when writing, rewriting, reviewing, or explaining SQL, including partial snippets; preserve query semantics and honor an explicitly requested alternative style.
 license: MIT
 metadata:
   category: data-science
@@ -51,3 +51,7 @@ Before returning a query or snippet, check vertical lists for leading commas and
 confirm that aliases, expressions, joins, filters, and dialect syntax retain their
 meaning. This style guide supplies formatting, not permission to run a query or
 evidence that its scan cost or logic is safe.
+
+## Exploratory queries and results
+
+For new exploratory queries, query-safety checks, or interpreting result rows, read [query and result inspection](references/query-results.md). Formatting-only requests preserve semantics, filters and row limits; do not add a new query plan or execution. Project-specific templates and schemas stay in their applicable private workflow.

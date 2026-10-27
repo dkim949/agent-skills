@@ -1,6 +1,6 @@
 ---
 name: explain
-description: "Explains concepts and repairs explanations that did not land. Use for concept explanations, first principles, ELI5, or confusion about the previous answer such as 'you lost me' or 'explain that again'. Also supports explicitly requested step-by-step learning or exercises. Use tldr for source-faithful compression and explain external conversations in their context rather than treating them as a new concept."
+description: "Explains concepts, repairs explanations that did not land, and interprets conversations in context. Use for first principles, ELI5, 'you lost me', chronological conversation translation, or understanding what participants claim and why a discussion changed direction. Supports explicitly requested learning or exercises. Use tldr for source-faithful compression."
 license: MIT
 metadata:
   category: productivity
@@ -34,6 +34,10 @@ When the user did not understand the previous answer, repair it before expanding
 ### Optional learning
 
 Read [progressive learning](references/progressive-learning.md) only when the user asks for a learning sequence, guided practice, exercises, or quizzes. A request to explain something does not activate it. Keep lessons in the conversation unless the user requests an artifact or a persistent learning workspace.
+
+### Interpret a conversation
+
+When the user asks what a chat, email chain, meeting discussion, or message screenshot means, read [conversation interpretation](references/conversations.md). Explain the chronological claims, evidence, and changes in direction. Translate exchanges when requested; a short outcome-only recap belongs to `tldr` when installed, or can be summarized directly.
 
 ## Output
 

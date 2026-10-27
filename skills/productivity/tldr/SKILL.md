@@ -34,7 +34,7 @@ For a tool introduction, explain what it helps people do and how they use it. In
 
 Lead with the main point, outcome, or purpose. Use the remaining sentences for the most important supporting evidence, limitation, or source-supported next step.
 
-For a concept explanation or a previous answer that did not land, use `explain` if installed; otherwise restore the missing context or mechanism directly rather than merely compressing it. For interpreting an external conversation, explain the exchanges in context; use a conversation-specific skill if installed.
+For a concept explanation, a previous answer that did not land, or interpretation of an external conversation, use `explain` if installed. Otherwise restore the missing context, mechanism, or chronological discussion logic directly rather than merely compressing it.
 
 ## Preserve meaning
 

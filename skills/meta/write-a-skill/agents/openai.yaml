@@ -1,6 +1,6 @@
 interface:
   display_name: "Write A Skill"
-  short_description: "Create a small, triggerable agent skill"
+  short_description: "Create, improve, and maintain focused agent skills"
   default_prompt: "Use $write-a-skill for the relevant task in my request."
 policy:
   allow_implicit_invocation: true

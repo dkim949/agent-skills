@@ -1,6 +1,6 @@
 ---
 name: write-a-skill
-description: Creates or updates a small, triggerable agent skill with clear scope and optional bundled resources. Use when asked to write, improve, consolidate, or package a skill.
+description: Creates or updates a small, triggerable agent skill with clear scope and optional bundled resources. Use when asked to write, improve, consolidate, or package a skill, or incorporate recorded skill learnings.
 license: MIT
 metadata:
   category: meta
@@ -22,6 +22,8 @@ metadata:
 Deliver the skill and explain its trigger, expected result, and important boundary. Save only the files needed for use and distribution. Do not add a separate README or changelog inside every skill by default.
 
 ## Packaging and maintenance
+
+For a request to incorporate recorded skill learnings, read [learnings maintenance](references/learnings-maintenance.md). Work on the named or otherwise agreed scope; process all installed skills only when explicitly requested. A generic request to finish or summarize a task does not start skill maintenance.
 
 - Keep one canonical body across supported hosts. Add host-specific invocation metadata or packaging adapters only where needed.
 - When the user asks for multi-host installation, verify each active path, stale duplicates, references, and resulting availability. Refresh their skill catalog if names or invocation modes changed.

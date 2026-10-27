@@ -1,6 +1,6 @@
 interface:
   display_name: "Explain"
-  short_description: "Explain clearly and repair missing context"
+  short_description: "Explain concepts, missing context, and conversations"
   default_prompt: "Use $explain for the relevant task in my request."
 policy:
   allow_implicit_invocation: true

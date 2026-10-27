@@ -1,6 +1,6 @@
 ---
 name: review-and-improve
-description: Reviews artifacts, plans, designs, research, code changes, and pull requests against their intended outcomes. Use for a substantive review or improvement; ordinary reviews run directly, while interviews and independent team reviews require an explicit request.
+description: Reviews artifacts, plans, designs, research, code changes, and pull requests against their intended outcomes. Use for a substantive review or improvement; ordinary reviews run directly. Explicit team reviews, red teams, research debates, and coding-environment retrospectives use focused modes.
 license: MIT
 metadata:
   category: engineering
@@ -27,6 +27,10 @@ Review a supplied artifact or direction and recommend concrete improvements. Sca
 - Explicit idea shaping or interactive stress-test: use `idea-refine` if installed; otherwise explore only the missing choices directly. An ordinary review does not start an interview.
 - Empirical explanation needing investigation: use `data-investigation` if installed, or examine competing hypotheses and evidence directly; do not run a second full review afterward.
 - Explicit team review: use the team procedure below. A topic alone does not request delegation.
+- Explicit critical reviewer team, including “bring a red team”: read [red-team review](references/red-team.md).
+- Explicit research debate between independent reviewers: read [research debate](references/research-debate.md). Ordinary comparisons stay direct.
+- Explicit coding-session or environment retrospective: read [environment review](references/environment-review.md). Service incidents stay with `data-investigation`.
+- Report structure or style review: use the local `concise-work-writing` report reference if installed; otherwise review audience, argument, evidence, and the requested format directly.
 - Brief challenge: give one critical pass directly. A separate skill is optional.
 
 ## Requirement coverage
@@ -39,11 +43,9 @@ This mode adapts [Spec Kit's convergence review](https://github.com/github/spec-
 
 ## Explicit team review
 
-1. Form an initial assessment before reading reviewer conclusions.
-2. Assign two or three available native subagents different, bounded questions and only the context they need. Reviewers stay read-only unless implementation was requested.
-3. Check important findings against evidence, resolve disagreements, and own the final recommendation. Distinguish verified facts, assumptions, and unresolved differences.
+Use `multi-agent-coordination` when installed for the actual backend, independent work assignments, models, completion evidence, and account boundaries. The current lead coordinates; this review skill owns criteria and reconciliation. Without that optional skill, use the current host's verified tools for bounded independent reviewers, or disclose unavailable delegation and review directly.
 
-Use the current host. If delegation is unavailable, disclose that limit and review directly. External providers require an explicit request and an authorized data scope. Team review does not authorize publication, messages, or operational changes.
+Form an initial assessment before reading reviewer conclusions. Give reviewers distinct questions and necessary constraints without seeding them with the lead's verdict. Keep reviewers read-only unless implementation was requested. Verify important claims, resolve disagreements with evidence, and own the final recommendation. Team review does not authorize publication, messages, operational changes, or switching providers.
 
 ## Output
 
