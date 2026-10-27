@@ -8,3 +8,9 @@ auth.json
 notebooks/
 experiments/
 private/
+.privacy-policy.json
+privacy-policy.local.json
+.privacy-reports/
+*.pem
+*.p12
+*.pfx

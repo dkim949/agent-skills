@@ -54,6 +54,8 @@ python3 scripts/validate.py
 
 Validation checks packaging, metadata, local references, and common publication leaks. It does not prove the absence of every secret or establish behavior in a fresh agent session. See [behavior cases](evals/BEHAVIOR.md), [architecture](docs/ARCHITECTURE.md), and [attributions](ATTRIBUTIONS.md). On 2026-10-27, Skills CLI 1.7.4 discovered all ten skills and installed them into isolated Codex and Claude Code project paths; all twenty installed copies retained every source file, reference, license, and invocation setting. Behavior evidence is still document-based review; fresh Codex and Claude Code invocation checks remain pending.
 
+Before publishing, also run the [privacy checks](docs/PRIVACY.md). Installed local hooks can stop a commit or push; the GitHub workflow repeats checks after upload and cannot retract disclosed data.
+
 ## License
 
 See [LICENSE](LICENSE), [ATTRIBUTIONS.md](ATTRIBUTIONS.md), and bundled notices under `LICENSES/` for provenance and third-party terms.

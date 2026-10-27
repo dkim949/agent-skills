@@ -17,17 +17,18 @@ EXPECTED_SKILLS = {
     "review-and-improve": "engineering", "retro": "meta", "write-a-skill": "meta",
 }
 ROOT_FILES = {"README.md", "LICENSE", "ATTRIBUTIONS.md", "requirements-dev.txt", ".gitignore"}
-PACKAGED_DIRS = {"skills", "LICENSES", "docs", "evals", "scripts", ".github"}
+PACKAGED_DIRS = {"skills", "LICENSES", "docs", "evals", "scripts", "tests", ".github"}
 IGNORED_DIRS = {".git", ".venv", "__pycache__"}
 LICENSE_FILES = {
     "addy-osmani.txt", "espennilsen-pi.txt", "github-spec-kit.txt",
     "jumpifequal.txt", "matt-pocock.txt", "toolmonsters.txt",
 }
 SUPPORT_FILES = {
-    "docs/ARCHITECTURE.md", "evals/BEHAVIOR.md", "scripts/validate.py",
+    "docs/ARCHITECTURE.md", "docs/PRIVACY.md", "evals/BEHAVIOR.md", "scripts/validate.py",
+    "scripts/check_privacy.py", "tests/test_privacy.py",
     ".github/workflows/validate.yml",
 }
-# Check the authored package, excluding this source which defines the signatures.
+# Pattern definitions are not exempt from the package scan.
 LEAK_PATTERNS = {
     "private home path": r"/(?:Users|home)/[A-Za-z0-9_.-]+/",
     "private platform path": r"~/(?:\.codex|\.claude|\.agents|second-brain|git)/",
@@ -35,11 +36,8 @@ LEAK_PATTERNS = {
     "GitHub token": r"\b(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,})\b",
     "cloud access key": r"\bAKIA[A-Z0-9]{16}\b",
     "provider token": r"\bsk-[A-Za-z0-9_-]{24,}\b",
-    "company identifier": "|".join([
-        r"delivery[ -]?hero",
-        r"(?:log|logistics|fulfillment)[-_][a-z0-9_-]*(?:staging|production|model)",
-        r"\buser_[a-z]+_[a-z]+\b",
-    ]),
+    "internal deployment identifier": r"\b[a-z0-9]+(?:-[a-z0-9]+)+-(?:staging|production)\b",
+    "private dataset owner": r"\buser_[a-z]+_[a-z]+\b",
     "assigned credential": r"\b(?:api[_-]?key|access[_-]?token|client[_-]?secret|password)"
     + r"\s*[:=]\s*[\"'][A-Za-z0-9_+/=-]{12,}[\"']",
 }
@@ -82,7 +80,7 @@ def validate(root: Path) -> list[str]:
         files.append(path)
         if path.name in FORBIDDEN_NAMES or path.name.startswith(".env."):
             errors.append(f"{rel}: forbidden credential filename")
-        if rel.parts[0] in {"docs", "evals", "scripts", ".github"} and str(rel) not in SUPPORT_FILES:
+        if rel.parts[0] in {"docs", "evals", "scripts", "tests", ".github"} and str(rel) not in SUPPORT_FILES:
             errors.append(f"{rel}: unexpected support file")
         if rel.parts[0] == "LICENSES" and (len(rel.parts) != 2 or path.name not in LICENSE_FILES):
             errors.append(f"{rel}: unexpected third-party notice file")
@@ -100,10 +98,9 @@ def validate(root: Path) -> list[str]:
         except (UnicodeError, OSError):
             errors.append(f"{rel}: package files must be readable UTF-8 text")
             continue
-        if str(rel) != "scripts/validate.py":
-            for label, pattern in LEAK_PATTERNS.items():
-                if re.search(pattern, content, re.IGNORECASE):
-                    errors.append(f"{rel}: possible {label}")
+        for label, pattern in LEAK_PATTERNS.items():
+            if re.search(pattern, content, re.IGNORECASE):
+                errors.append(f"{rel}: possible {label}")
         if path.suffix == ".md":
             for match in re.finditer(r"!?\[[^\]\n]*\]\((<[^>]+>|[^)\s]+)(?:\s+[^)]*)?\)", content):
                 destination = match.group(1).strip("<>")
