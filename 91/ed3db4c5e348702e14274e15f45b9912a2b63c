@@ -1,0 +1,34 @@
+docs/PRIVACY.md
+  s_19021a2ee3f062::t_858a4b77341fee 1-37
+tests/test_privacy.py
+  s_19021a2ee3f062::t_c3549afcaca7ce 1-187
+.gitignore
+  s_19021a2ee3f062::t_858a4b77341fee 11-16
+scripts/check_privacy.py
+  s_19021a2ee3f062::t_19ba5835057482 1-90,92-138,148-159,161-223,226-231,236-241
+  s_19021a2ee3f062::t_9a6c74e1084c32 91
+  s_19021a2ee3f062::t_c3549afcaca7ce 139-147,160,224-225,232-235
+scripts/validate.py
+  s_19021a2ee3f062::t_9a6c74e1084c32 39-40
+  s_19021a2ee3f062::t_858a4b77341fee 20,27-28,31,83,101-103
+.github/workflows/validate.yml
+  s_19021a2ee3f062::t_858a4b77341fee 15-16,21-30,32-33
+README.md
+  s_19021a2ee3f062::t_858a4b77341fee 57-58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "91ed3db4c5e348702e14274e15f45b9912a2b63c",
+  "prompts": {},
+  "sessions": {
+    "s_19021a2ee3f062": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17501-8b20-7e91-9627-5d5043d08a17",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Dongin Kim <149898045+dkim949@users.noreply.github.com>"
+    }
+  }
+}
