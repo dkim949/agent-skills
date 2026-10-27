@@ -1,0 +1,39 @@
+evals/BEHAVIOR.md
+  s_19021a2ee3f062::t_c38499b64fe6ae 17,23,26-29,31-32
+scripts/validate.py
+  s_19021a2ee3f062::t_c38499b64fe6ae 17,149,163
+skills/data-science/sql-style-guide/references/query-results.md
+  s_19021a2ee3f062::t_6d8b18a0adc33c 1-19
+ATTRIBUTIONS.md
+  s_19021a2ee3f062::t_c38499b64fe6ae 9,11-13
+README.md
+  s_19021a2ee3f062::t_c38499b64fe6ae 3,10,12,44,55-57
+docs/ARCHITECTURE.md
+  s_19021a2ee3f062::t_c38499b64fe6ae 7,19,23,28-30
+skills/engineering/review-and-improve/references/red-team.md
+  s_19021a2ee3f062::t_6b04e5e885c911 1-15
+skills/data-science/sql-style-guide/SKILL.md
+  s_19021a2ee3f062::t_6014dc1ee63dd6 3,54-57
+skills/engineering/review-and-improve/LICENSE
+  s_19021a2ee3f062::t_de256e93c4675c 29-76
+skills/engineering/review-and-improve/SKILL.md
+  s_19021a2ee3f062::t_7ee56c1925669c 3,30-33,46,48
+skills/meta/write-a-skill/references/learnings-maintenance.md
+  s_19021a2ee3f062::t_2469907a30b0cd 1-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "997973d5ae1440ab050b66aab8e917a4d38a5519",
+  "prompts": {},
+  "sessions": {
+    "s_19021a2ee3f062": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17501-8b20-7e91-9627-5d5043d08a17",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Dongin Kim <149898045+dkim949@users.noreply.github.com>"
+    }
+  }
+}
