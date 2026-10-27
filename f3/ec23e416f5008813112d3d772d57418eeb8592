@@ -1,0 +1,127 @@
+.github/workflows/validate.yml
+  s_19021a2ee3f062::t_2804020d7bb285 1-19
+.gitignore
+  s_a3e5c6b9e15ade::t_3c37b99e9d4002 1-10
+ATTRIBUTIONS.md
+  s_a3e5c6b9e15ade::t_43b1a3046595a5 1-25
+README.md
+  s_19021a2ee3f062::t_44d78ad9af5398 1-59
+docs/ARCHITECTURE.md
+  s_19021a2ee3f062::t_38ad007a59308a 1-28
+evals/BEHAVIOR.md
+  s_19021a2ee3f062::t_ddd3776d7a9cda 1-30
+requirements-dev.txt
+  s_19021a2ee3f062::t_e008f28cc61a34 1
+scripts/validate.py
+  s_19021a2ee3f062::t_a135f70fc759a4 1-194
+skills/data-science/data-investigation/LICENSE
+  s_19021a2ee3f062::t_c3f3437424754d 1-21
+skills/data-science/data-investigation/SKILL.md
+  s_19021a2ee3f062::t_b020ba80d27259 1-80
+skills/data-science/data-investigation/agents/openai.yaml
+  s_19021a2ee3f062::t_58864ad03269e9 1-6
+skills/data-science/sql-style-guide/LICENSE
+  s_19021a2ee3f062::t_a1b7a0ded786ec 1-21
+skills/data-science/sql-style-guide/SKILL.md
+  s_19021a2ee3f062::t_3f5eed5a56dcc5 1-53
+skills/data-science/sql-style-guide/agents/openai.yaml
+  s_19021a2ee3f062::t_e3cbd40994909c 1-6
+skills/engineering/review-and-improve/LICENSE
+  s_19021a2ee3f062::t_d27629daca3e5e 1-45
+skills/engineering/review-and-improve/SKILL.md
+  s_f5f1bc5679bf75::t_0e87469df6e569 1-50
+skills/engineering/review-and-improve/agents/openai.yaml
+  s_19021a2ee3f062::t_73e93009c6fa2f 1-6
+skills/engineering/review-and-improve/references/pr-review.md
+  s_f5f1bc5679bf75::t_537b216f9867a4 1-22
+skills/meta/retro/LICENSE
+  s_19021a2ee3f062::t_de3ebec2365481 1-45
+skills/meta/retro/SKILL.md
+  s_f5f1bc5679bf75::t_c72af7911280bf 1-30
+skills/meta/retro/agents/openai.yaml
+  s_19021a2ee3f062::t_1d5969c6dac325 1-6
+skills/meta/write-a-skill/LICENSE
+  s_19021a2ee3f062::t_291170cf624251 1-45
+skills/meta/write-a-skill/SKILL.md
+  s_f5f1bc5679bf75::t_5f5aed3ea8d813 1-30
+skills/meta/write-a-skill/agents/openai.yaml
+  s_19021a2ee3f062::t_caa2d7c949cbcf 1-6
+skills/productivity/ask-me/LICENSE
+  s_19021a2ee3f062::t_5c0aa9872804b0 1-45
+skills/productivity/ask-me/SKILL.md
+  s_19021a2ee3f062::t_6133bf58229ea7 1-33
+skills/productivity/ask-me/agents/openai.yaml
+  s_19021a2ee3f062::t_7d994d325cbb80 1-6
+skills/productivity/ask-me/references/examples.md
+  s_19021a2ee3f062::t_0854de7e6c90f8 1-28
+skills/productivity/explain/LICENSE
+  s_19021a2ee3f062::t_264cba728b7c32 1-69
+skills/productivity/explain/SKILL.md
+  s_19021a2ee3f062::t_de32a96a953740 1-40
+skills/productivity/explain/agents/openai.yaml
+  s_19021a2ee3f062::t_89103ed715ad50 1-6
+skills/productivity/explain/references/behavior-examples.md
+  s_19021a2ee3f062::t_cc4a61983c48f6 1-17
+skills/productivity/explain/references/context-gathering.md
+  s_19021a2ee3f062::t_e10667986ad90f 1-9
+skills/productivity/explain/references/programming-explanation.md
+  s_19021a2ee3f062::t_eb2889df123bf8 1-9
+skills/productivity/explain/references/progressive-learning.md
+  s_19021a2ee3f062::t_9b0be7ac621499 1-10
+skills/productivity/handoff/LICENSE
+  s_19021a2ee3f062::t_808e1ec1cc2b0a 1-117
+skills/productivity/handoff/SKILL.md
+  s_19021a2ee3f062::t_bfa7a4aab5e676 1-90
+skills/productivity/handoff/agents/openai.yaml
+  s_19021a2ee3f062::t_9f0404a958a892 1-6
+skills/productivity/handoff/references/examples.md
+  s_19021a2ee3f062::t_8b613c47eae2e6 1-89
+skills/productivity/idea-refine/LICENSE
+  s_19021a2ee3f062::t_b967a5590ba6d2 1-69
+skills/productivity/idea-refine/SKILL.md
+  s_19021a2ee3f062::t_69cc91cab01144 1-34
+skills/productivity/idea-refine/agents/openai.yaml
+  s_19021a2ee3f062::t_0288645830248e 1-6
+skills/productivity/idea-refine/references/deep-interview.md
+  s_19021a2ee3f062::t_c13aa4bf7a9475 1-17
+skills/productivity/tldr/LICENSE
+  s_19021a2ee3f062::t_b562699b34a79c 1-21
+skills/productivity/tldr/SKILL.md
+  s_19021a2ee3f062::t_0698ada0acae67 1-61
+skills/productivity/tldr/agents/openai.yaml
+  s_19021a2ee3f062::t_83cc9c99f36606 1-6
+skills/productivity/tldr/references/examples.md
+  s_19021a2ee3f062::t_89e9f62a2b901b 1-105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "f3ec23e416f5008813112d3d772d57418eeb8592",
+  "prompts": {},
+  "sessions": {
+    "s_19021a2ee3f062": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17501-8b20-7e91-9627-5d5043d08a17",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Dongin Kim <149898045+dkim949@users.noreply.github.com>"
+    },
+    "s_a3e5c6b9e15ade": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17a33-92fa-7281-b10f-2b34a30e6655",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Dongin Kim <149898045+dkim949@users.noreply.github.com>"
+    },
+    "s_f5f1bc5679bf75": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17e4b-fe8f-7360-a5bd-87a7349767bc",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Dongin Kim <149898045+dkim949@users.noreply.github.com>"
+    }
+  }
+}
