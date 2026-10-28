@@ -1,0 +1,6 @@
+interface:
+  display_name: "Safe Local Run"
+  short_description: "Bound memory use for heavy local Mac workloads."
+  default_prompt: "Use $safe-local-run for the requested task within its scope and authorization boundaries."
+policy:
+  allow_implicit_invocation: true

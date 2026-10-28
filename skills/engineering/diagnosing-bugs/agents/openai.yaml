@@ -1,0 +1,6 @@
+interface:
+  display_name: "Diagnosing Bugs"
+  short_description: "Diagnose defects and verify fixes with relevant evidence."
+  default_prompt: "Use $diagnosing-bugs for the requested task within its scope and authorization boundaries."
+policy:
+  allow_implicit_invocation: true

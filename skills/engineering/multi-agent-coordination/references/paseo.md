@@ -1,0 +1,30 @@
+# Paseo execution
+
+Use this procedure when Paseo is the selected host. Load the installed `paseo` skill for the current tool/CLI contract; use `paseo-help` and current official documentation for setup or troubleshooting. Do not invoke Orca checks merely because its CLI is installed. Do not change provider configuration, enable tools, restart a daemon, or switch accounts to make a launch work without authorization for that change.
+
+## Discover before delegation
+
+1. Inspect the actual tool catalog and call `list_hosts` when available. Identify the selected `serverId`, caller/parent, and current workspace. Keep `{serverId, agentId}` and returned workspace identity together. Paths and workspace IDs belong to that server, not automatically to the client computer.
+2. Read `list_profiles` and every profile's notes. Prefer the user's requested profile or a task-appropriate one. When none fits, discover providers and call `list_models` for the candidate provider before selecting models; inspect supported settings as needed. Profiles are launch configuration, not proof of account identity or model entitlement. Apply current company-model restrictions from the user's active guidance.
+3. Verify the selected account route from safe host/provider/command evidence before sending classified content. The local Orca helper's Codex catalog or standalone Claude status does not verify a Paseo provider on another host. A verified company wrapper may be reused only on the matching host/provider; a familiar provider/model label alone is insufficient. Unknown company routing blocks company execution.
+4. Confirm the tools and completion evidence the graph needs. Paseo documents agent creation, follow-ups, status/activity, completion notifications, and local/worktree workspaces. Those facts do not establish Orca-equivalent durable Task dependencies, native approval gates, or request replay. A simple verified fan-out/fan-in can use coordinator-managed ordering; a job requiring unverified native persistence, gating, or replay stays plan-only.
+
+If tool injection is missing, an authorized CLI route may be usable. Resolve the intended executable and actual daemon/caller/workspace through documented read-only discovery; a CLI on PATH is not enough. Desktop bundles may contain a CLI even when PATH does not. Avoid bare launch assumptions: an external shell can have different parentage and placement from a Paseo-scoped agent. If safe binding or account evidence cannot be established, return the plan and the precise missing evidence.
+
+## Execute with native tools
+
+Use `create_agent` through the selected host and an appropriate existing workspace. Worktree isolation is optional and task-dependent. Materialize a selected profile into the provider/model and supported runtime settings as the installed `paseo` skill describes; there is no `profile` argument to invent. Use models available on that account, and record requested versus observed provider/model/effort evidence. A mismatch is an unsuccessful selection, not permission to silently change accounts or keep claiming the requested model.
+
+Give each worker explicit input, exclusive output ownership, classifications, and acceptance. Start independent workers before waiting. Keep completion notification enabled when supported; follow Paseo's notification-driven lifecycle rather than polling on a timer. Collect status/activity and inspect returned artifacts before fan-in. Native completion, verification, and user acceptance are separate facts. Coordinator-managed dependencies are checked before each dependent launch and are not advertised as daemon-enforced DAG edges.
+
+Use `send_agent_prompt` for scoped follow-ups to the proven agent/server pair. Record native IDs, provider/model evidence, artifact revisions, and decisions without creating fake Orca Run/Task/Dispatch/gate IDs. Before continuing after interruption or ambiguity, inspect the actual agent and workspace state. Do not launch a duplicate on silence or claim exactly-once/restart-safe execution without proof. Retain existing agents/workspaces when requested; do not archive them as a default cleanup action.
+
+Before launch, name the owner and location of the run evidence. When task output writes are authorized, save node-to-native-ID mappings, artifact revisions/digests, verification, and decision references in an owned file in the permitted output directory, such as `run/runtime.json`. Apply the same classification policy to it. A saved file does not make coordinator-managed ordering or approvals restart-safe: that recovery is unverified until tested. After interruption, reconcile native state and the actual decision scope rather than automatically resuming; keep jobs requiring unverified restart guarantees plan-only.
+
+## Human feedback and limits
+
+Show the actual checkpoint question and an example in ordinary chat. Accept a plain-chat approve/revise/explain/pause response tied to the shown artifact revision; a UI widget is optional. Use Paseo native decision functionality only when actually verified. Otherwise the coordinator holds dependent launches, records the real user response and artifact digest with native agent/server/workspace context, and labels the checkpoint coordinator-managed. Do not call the Orca-specific `check-approval` as a substitute for Paseo evidence.
+
+An explanation request leaves the decision pending. A revision request authorizes only its specified work and creates a new artifact revision; it does not accept the prior output. Reuse unaffected verified artifacts and recheck the changed result before any required final acceptance. Simulated feedback is a test, not a user decision.
+
+Current source references: [orchestration](https://paseo.sh/docs/orchestration.md), [MCP tools](https://paseo.sh/docs/mcp.md), [workspaces](https://paseo.sh/docs/workspaces.md), and [custom providers](https://paseo.sh/docs/custom-providers.md). Follow current host documentation when fields or capabilities differ; do not infer missing APIs.

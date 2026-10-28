@@ -1,0 +1,6 @@
+interface:
+  display_name: "Multi Agent Coordination"
+  short_description: "Coordinate requested teams and task dependencies."
+  default_prompt: "Use $multi-agent-coordination for the requested task within its scope and authorization boundaries."
+policy:
+  allow_implicit_invocation: true

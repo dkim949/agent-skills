@@ -1,0 +1,6 @@
+interface:
+  display_name: "Concise Work Writing"
+  short_description: "Write concise workplace text for the actual reader."
+  default_prompt: "Use $concise-work-writing for the requested task within its scope and authorization boundaries."
+policy:
+  allow_implicit_invocation: true

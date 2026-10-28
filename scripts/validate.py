@@ -13,20 +13,35 @@ ROOT = Path(__file__).resolve().parents[1]
 EXPECTED_SKILLS = {
     "ask-me": "productivity", "idea-refine": "productivity", "tldr": "productivity",
     "explain": "productivity", "handoff": "productivity",
+    "concise-work-writing": "productivity", "to-tickets": "productivity",
     "data-investigation": "data-science", "sql-style-guide": "data-science",
     "review-and-improve": "engineering", "write-a-skill": "meta",
+    "goal-loop": "engineering", "multi-agent-coordination": "engineering",
+    "run-and-verify": "engineering", "safe-local-run": "engineering",
+    "diagnosing-bugs": "engineering", "sync-agent-environment": "meta",
 }
 ROOT_FILES = {"README.md", "LICENSE", "ATTRIBUTIONS.md", "requirements-dev.txt", ".gitignore"}
 PACKAGED_DIRS = {"skills", "LICENSES", "docs", "evals", "scripts", "tests", ".github"}
 IGNORED_DIRS = {".git", ".venv", "__pycache__"}
 LICENSE_FILES = {
     "addy-osmani.txt", "espennilsen-pi.txt", "github-spec-kit.txt",
-    "jumpifequal.txt", "matt-pocock.txt", "toolmonsters.txt",
+    "jumpifequal.txt", "matt-pocock.txt", "toolmonsters.txt", "cursor-pstack.txt",
+    "superpowers.txt",
 }
 SUPPORT_FILES = {
     "docs/ARCHITECTURE.md", "docs/PRIVACY.md", "evals/BEHAVIOR.md", "scripts/validate.py",
-    "scripts/check_privacy.py", "tests/test_privacy.py",
+    "scripts/check_privacy.py", "tests/test_privacy.py", "tests/test_packaging.py", "tests/test_runtime.py",
     ".github/workflows/validate.yml",
+}
+RUNTIME_FILES = {
+    "skills/engineering/run-and-verify/scripts/run_logged.sh",
+    "skills/engineering/safe-local-run/scripts/safe_run.sh",
+    "skills/engineering/safe-local-run/scripts/preflight.py",
+    "skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh",
+    "skills/meta/sync-agent-environment/scripts/sync_skills.py",
+}
+SKILL_NOTICE_FILES = {
+    "skills/meta/sync-agent-environment/references/legacy-migration-LICENSE.txt",
 }
 # Pattern definitions are not exempt from the package scan.
 LEAK_PATTERNS = {
@@ -89,7 +104,8 @@ def validate(root: Path) -> list[str]:
                 errors.append(f"{rel}: unrecognized skill package")
             elif rel.parts[1] != EXPECTED_SKILLS[rel.parts[2]]:
                 errors.append(f"{rel}: incorrect category directory")
-            if path.suffix not in {".md", ".yaml", ".yml"} and path.name != "LICENSE":
+            if (path.suffix not in {".md", ".yaml", ".yml"}
+                    and path.name != "LICENSE" and str(rel) not in RUNTIME_FILES | SKILL_NOTICE_FILES):
                 errors.append(f"{rel}: unexpected skill file type")
             if path.name in {"CHANGELOG.md", "learnings.md"}:
                 errors.append(f"{rel}: maintenance history is not packaged")
@@ -167,7 +183,8 @@ def validate(root: Path) -> list[str]:
                     )
     if seen != set(EXPECTED_SKILLS):
         errors.append(f"skill inventory mismatch; missing={sorted(set(EXPECTED_SKILLS) - seen)}")
-    required_files = (ROOT_FILES - {".gitignore"}) | SUPPORT_FILES | {f"LICENSES/{name}" for name in LICENSE_FILES}
+    required_files = ((ROOT_FILES - {".gitignore"}) | SUPPORT_FILES | RUNTIME_FILES | SKILL_NOTICE_FILES
+                      | {f"LICENSES/{name}" for name in LICENSE_FILES})
     for required in required_files:
         if not (root / required).is_file():
             errors.append(f"{required}: required package file is missing")

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Run And Verify"
+  short_description: "Run checks and inspect evidence before claiming success."
+  default_prompt: "Use $run-and-verify for the requested task within its scope and authorization boundaries."
+policy:
+  allow_implicit_invocation: true

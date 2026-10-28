@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sync Agent Environment"
+  short_description: "Sync reviewed skills across agent clients and devices."
+  default_prompt: "Use $sync-agent-environment for the requested task within its scope and authorization boundaries."
+policy:
+  allow_implicit_invocation: true

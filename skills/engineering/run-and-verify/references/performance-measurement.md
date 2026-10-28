@@ -1,0 +1,14 @@
+# Performance measurement
+
+Read this reference when reporting a measured speedup or regression, or selecting between options based on execution time, throughput, or resource use. It supplements the execution checks in `run-and-verify`; ordinary tests do not need this procedure. Model-quality metrics require the experiment's own evaluation protocol.
+
+1. State the claim, metric, representative workload, and correctness criteria before measuring. Inspect what the measurement command times, counts, and excludes. Verify the expected work ran inside the measured interval and that outputs are correct; count failures, retries, and completed work.
+2. Compare equivalent data, versions, production-relevant settings, concurrency, and warm/cold-cache conditions. Record material differences and background load. An untuned option or mismatched workload cannot support a general recommendation between implementations.
+3. Identify the likely bottleneck with evidence and check whether the claimed gain is plausible given the time the changed component consumed. Profile separately from reported timing runs. Use tools available on the current OS: for example, `os.cpu_count()` in Python or `sysctl -n hw.logicalcpu` on macOS. Select available profilers instead of requiring Linux-only commands.
+4. Repeat and interleave comparisons to reduce drift and order effects. For short benchmarks, start with at least five measurements per side and report the median and range. For costly runs, use a justified sampling plan within the task's budget and describe the uncertainty. A single run can support an explicitly requested rough estimate, not a reliable winner. If noise or sample size prevents a defensible distinction, report inconclusive or no measurable difference.
+5. Check the end-to-end path and realistic workload when the claim concerns user-visible performance. State how much of the whole the changed component represents; keep a microbenchmark claim limited to that component.
+6. Report the command, relevant environment/data, counts, units, repetitions, variation, correctness result, and bottleneck evidence alongside the verdict: faster, slower, no measurable difference, or inconclusive. Link raw results from the existing task artifact rather than creating another mandatory report.
+
+Apply the current host's heavy-execution and protected-resource rules before running expensive measurements. Missing correctness, work-count, or fair-comparison evidence makes a speed claim inconclusive.
+
+Source: [pstack benchmark-checklist](https://github.com/cursor/plugins/blob/main/pstack/skills/benchmark-checklist/SKILL.md). Kept as a shared reference under the existing execution skill to avoid another invocation to remember. Revisit a standalone skill if independent benchmarking becomes a recurring workflow.

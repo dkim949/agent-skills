@@ -1,0 +1,6 @@
+interface:
+  display_name: "Goal Loop"
+  short_description: "Work toward an explicitly requested, verifiable goal."
+  default_prompt: "Use $goal-loop for the requested task within its scope and authorization boundaries."
+policy:
+  allow_implicit_invocation: true
