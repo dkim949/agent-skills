@@ -1,0 +1,145 @@
+tests/test_packaging.py
+  s_19021a2ee3f062::t_d24a9b169fddad 1-34,36-124,130-133
+  s_19021a2ee3f062::t_cda48997ae6579 35,125-129
+ATTRIBUTIONS.md
+  s_19021a2ee3f062::t_e0726933d5254e 3,15-22,31
+README.md
+  s_19021a2ee3f062::t_12adac3613de85 73
+  s_19021a2ee3f062::t_e0726933d5254e 3,5-10,12,34-50
+tests/test_runtime.py
+  s_19021a2ee3f062::t_1f84fc1945d0e7 7,102-123
+  s_19021a2ee3f062::t_a77decd58b5cc1 1-6,8-33,37-38,40-51,173-176
+  s_19021a2ee3f062::t_44307f2b4b9c61 34-36,39,52-101,124-172
+skills/productivity/to-tickets/SKILL.md
+  s_19021a2ee3f062::t_1b7b7fbdb57f28 1-39
+skills/engineering/run-and-verify/SKILL.md
+  s_19021a2ee3f062::t_1b7b7fbdb57f28 1-56
+docs/ARCHITECTURE.md
+  s_19021a2ee3f062::t_e7cc3bfca317d8 5
+  s_19021a2ee3f062::t_e0726933d5254e 7,11,13,19,21-22
+  s_19021a2ee3f062::t_12adac3613de85 32
+skills/engineering/safe-local-run/SKILL.md
+  s_19021a2ee3f062::t_1c152e63a4727c 1-66
+skills/engineering/multi-agent-coordination/references/task-graphs.md
+  s_19021a2ee3f062::t_1b7b7fbdb57f28 1-42
+evals/BEHAVIOR.md
+  s_19021a2ee3f062::t_e0726933d5254e 5,33-48
+skills/engineering/safe-local-run/references/macos-resource-notes.md
+  s_19021a2ee3f062::t_1b7b7fbdb57f28 1-83
+skills/engineering/diagnosing-bugs/SKILL.md
+  s_19021a2ee3f062::t_1b7b7fbdb57f28 1-2,4-184
+  s_19021a2ee3f062::t_30fae3fcf665b6 3
+scripts/validate.py
+  s_19021a2ee3f062::t_9b0cd701f45cce 43-45,108,186
+  s_19021a2ee3f062::t_505f2e5677b913 16,19-21,36-42,107,187
+  s_19021a2ee3f062::t_1c152e63a4727c 33
+  s_19021a2ee3f062::t_6d47958bd89d89 29
+  s_19021a2ee3f062::t_71b0f9d48207c5 28
+skills/engineering/safe-local-run/scripts/preflight.py
+  s_19021a2ee3f062::t_d11c342a8b3dab 137-142
+  s_19021a2ee3f062::t_bbb25801010d6e 1-136,143-152
+LICENSES/cursor-pstack.txt
+  s_19021a2ee3f062::t_58ea2fe99e4087 1-21
+LICENSES/superpowers.txt
+  s_19021a2ee3f062::t_b04956a1be108e 1-21
+skills/engineering/diagnosing-bugs/LICENSE
+  s_19021a2ee3f062::t_dcd85b166c87ef 1-67
+skills/engineering/diagnosing-bugs/agents/openai.yaml
+  s_19021a2ee3f062::t_6ef292e3447b47 1-6
+skills/engineering/diagnosing-bugs/references/pytorch.md
+  s_19021a2ee3f062::t_3cfbfbeafed3c2 1-36
+skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh
+  s_19021a2ee3f062::t_5b946716c2424d 1-44
+skills/engineering/goal-loop/LICENSE
+  s_19021a2ee3f062::t_457bb0e1e3e7a7 1-21
+skills/engineering/goal-loop/SKILL.md
+  s_19021a2ee3f062::t_036b0f9a2d9d49 1-45
+skills/engineering/goal-loop/agents/openai.yaml
+  s_19021a2ee3f062::t_cc9cce5b38b31c 1-6
+skills/engineering/goal-loop/references/native-goals.md
+  s_19021a2ee3f062::t_d73c2682dda330 1-39
+skills/engineering/multi-agent-coordination/LICENSE
+  s_19021a2ee3f062::t_925c26cc618a8c 1-44
+skills/engineering/multi-agent-coordination/SKILL.md
+  s_19021a2ee3f062::t_7a575212f568bb 1-51
+skills/engineering/multi-agent-coordination/agents/openai.yaml
+  s_19021a2ee3f062::t_f2568c671b8fba 1-6
+skills/engineering/multi-agent-coordination/references/account-boundaries.md
+  s_19021a2ee3f062::t_d24e70972b0b88 1-9
+skills/engineering/multi-agent-coordination/references/native-subagents.md
+  s_19021a2ee3f062::t_d281307ea353eb 1-28
+skills/engineering/multi-agent-coordination/references/orca.md
+  s_19021a2ee3f062::t_89f820748776ff 1-11
+skills/engineering/multi-agent-coordination/references/paseo.md
+  s_19021a2ee3f062::t_b11c0ca375d192 1-30
+skills/engineering/run-and-verify/LICENSE
+  s_19021a2ee3f062::t_ccafc886faafad 1-113
+skills/engineering/run-and-verify/agents/openai.yaml
+  s_19021a2ee3f062::t_7f438a1798e527 1-6
+skills/engineering/run-and-verify/references/iterative-optimization.md
+  s_19021a2ee3f062::t_af7d65b2fa9413 1-17
+skills/engineering/run-and-verify/references/performance-measurement.md
+  s_19021a2ee3f062::t_67d8d08f61e3de 1-14
+skills/engineering/run-and-verify/references/testing-principles.md
+  s_19021a2ee3f062::t_c4d24613b12afc 1-26
+skills/engineering/run-and-verify/scripts/run_logged.sh
+  s_19021a2ee3f062::t_019f1ca7de8818 1-189
+skills/engineering/safe-local-run/LICENSE
+  s_19021a2ee3f062::t_39f58908398eb3 1-21
+skills/engineering/safe-local-run/agents/openai.yaml
+  s_19021a2ee3f062::t_4ca36dd3f344f8 1-6
+skills/engineering/safe-local-run/scripts/safe_run.sh
+  s_19021a2ee3f062::t_4153dcb51327e0 1-45
+skills/meta/sync-agent-environment/LICENSE
+  s_19021a2ee3f062::t_40f33d497fe9df 1-24
+skills/meta/sync-agent-environment/SKILL.md
+  s_19021a2ee3f062::t_ad0f9dee3f088b 1-26
+skills/meta/sync-agent-environment/agents/openai.yaml
+  s_19021a2ee3f062::t_bb13069ff21886 1-6
+skills/meta/sync-agent-environment/references/bundle-and-installer.md
+  s_19021a2ee3f062::t_4e4338ae888906 1-46
+skills/meta/sync-agent-environment/references/host-adapters.md
+  s_19021a2ee3f062::t_18ba9e1982320f 1-24
+skills/meta/sync-agent-environment/references/legacy-conversion.md
+  s_19021a2ee3f062::t_d85b2819f71cf4 1-15
+skills/meta/sync-agent-environment/references/legacy-migration-LICENSE.txt
+  s_19021a2ee3f062::t_4721575f2df8a0 1-202
+skills/meta/sync-agent-environment/references/legacy-migration-differences.md
+  s_19021a2ee3f062::t_029b36da833524 1-167
+skills/meta/sync-agent-environment/references/syncthing.md
+  s_19021a2ee3f062::t_56df680202fef0 1-25
+skills/meta/sync-agent-environment/scripts/sync_skills.py
+  s_19021a2ee3f062::t_a99b1fe86086e7 1-404
+skills/productivity/concise-work-writing/LICENSE
+  s_19021a2ee3f062::t_8257ecd5c011ed 1-21
+skills/productivity/concise-work-writing/SKILL.md
+  s_19021a2ee3f062::t_68103e017aa4fb 1-39
+skills/productivity/concise-work-writing/agents/openai.yaml
+  s_19021a2ee3f062::t_83192df37a0379 1-6
+skills/productivity/concise-work-writing/references/conversational-writing.md
+  s_19021a2ee3f062::t_84796a5f789fcf 1-43
+skills/productivity/concise-work-writing/references/reporting-standards.md
+  s_19021a2ee3f062::t_aa4ad246b1c116 1-74
+skills/productivity/concise-work-writing/references/reports.md
+  s_19021a2ee3f062::t_8b33c946efc8c7 1-70
+skills/productivity/to-tickets/LICENSE
+  s_19021a2ee3f062::t_2f992882e24a76 1-44
+skills/productivity/to-tickets/agents/openai.yaml
+  s_19021a2ee3f062::t_750c09d9bc037e 1-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "a6b7698e07eaad1bfda17ebef0d61520492a3113",
+  "prompts": {},
+  "sessions": {
+    "s_19021a2ee3f062": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a17501-8b20-7e91-9627-5d5043d08a17",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Dongin Kim <149898045+dkim949@users.noreply.github.com>"
+    }
+  }
+}
